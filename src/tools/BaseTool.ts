@@ -14,7 +14,8 @@ export abstract class BaseTool<T extends z.ZodType, R> {
       return await this.executeCore(input);
     }
     catch (error) {
-      console.error(`Error executing ${this.name}:`, error);
+      // Log error through MCP logging system instead of console.error
+      console.log(`Error in ${this.name}: ${error}`);
       return {
         content: [{
           type: 'text' as const,

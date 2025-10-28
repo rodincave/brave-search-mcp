@@ -10,12 +10,11 @@ config();
 // Check for API key
 const BRAVE_API_KEY = process.env.BRAVE_API_KEY;
 if (!BRAVE_API_KEY) {
-  console.error('Error: BRAVE_API_KEY environment variable is required');
+  console.log('NO BRAVE_API_KEY detected');
   process.exit(1);
 }
 
 const braveMcpServer = new BraveMcpServer(BRAVE_API_KEY);
-braveMcpServer.start().catch((error) => {
-  console.error('Error starting server:', error);
+braveMcpServer.start().catch(() => {
   process.exit(1);
 });
