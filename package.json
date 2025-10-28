@@ -39,11 +39,13 @@
     "lint": "eslint . --ext .ts,.js,.mjs,.cjs --fix",
     "lint:check": "eslint . --ext .ts,.js,.mjs,.cjs",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint:check && npm run typecheck"
+    "check": "npm run lint:check && npm run typecheck",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.8.0",
     "brave-search": "^0.9.0",
+    "dotenv": "^17.2.3",
     "image-to-base64": "^2.2.0",
     "zod": "^3.24.3"
   },

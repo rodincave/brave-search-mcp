@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
 import process from 'node:process';
+import { config } from 'dotenv';
 import { BraveMcpServer } from './server.js';
+
+// Load environment variables from .env file
+config();
 
 // Check for API key
 const BRAVE_API_KEY = process.env.BRAVE_API_KEY;
