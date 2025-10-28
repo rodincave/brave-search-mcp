@@ -83,6 +83,35 @@ An MCP Server implementation that integrates the [Brave Search API](https://brav
 2. Choose a plan (Free tier available with 2,000 queries/month)
 3. Generate your API key [from the developer dashboard](https://api.search.brave.com/app/keys)
 
+### Environment Variables
+
+You can set your API key using environment variables or a `.env` file:
+
+**Using .env file (recommended):**
+
+Create a `.env` file in your project root:
+```bash
+BRAVE_API_KEY=your_api_key_here
+```
+
+**Using environment variable:**
+```bash
+export BRAVE_API_KEY=your_api_key_here
+```
+
+### Running the Server
+
+To start the MCP server:
+
+```bash
+npm start
+```
+
+Or directly with Node.js:
+```bash
+node dist/index.js
+```
+
 ### Usage with Claude Code
 
 For [Claude Code](https://claude.ai/code) users, run this command:
